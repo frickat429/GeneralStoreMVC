@@ -135,3 +135,4 @@
 /Users/austinfrick/ElevenFiftyProjects/codingFoundations/GeneralStoreMVC/obj/Debug/net8.0/GeneralStoreMVC.pdb
 /Users/austinfrick/ElevenFiftyProjects/codingFoundations/GeneralStoreMVC/obj/Debug/net8.0/GeneralStoreMVC.genruntimeconfig.cache
 /Users/austinfrick/ElevenFiftyProjects/codingFoundations/GeneralStoreMVC/obj/Debug/net8.0/ref/GeneralStoreMVC.dll
+/Users/austinfrick/ElevenFiftyProjects/codingFoundations/GeneralStoreMVC/obj/Debug/net8.0/GeneralStoreMVC.sourcelink.json
