@@ -25,7 +25,12 @@
                 <td class="text-end">
                     <a asp-action="Details" asp-route-id="@customer.Id" class="btn-sm btn-primary">Details</a>
                 </td>
-            </tr>
+            </tr> 
+
+            <td class="text-end">
+              
+                <a asp-action="Edit" asp-route-id="@customer.Id" class="btn btn-primary">Edit</a>
+            </td>
         }
     </table>
 
