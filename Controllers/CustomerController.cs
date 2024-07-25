@@ -134,6 +134,29 @@ namespace GeneralStoreMVC.Controllers
 
       //Get: customer/delete/{id} 
 
-      public async Tas
+      public async Task<IActionResult> Delete(int id) 
+      {
+        var entity = await _ctx.Customers
+        .Include(c => c.Transactions)
+        .FirstOrDefaultAsync(c => c.Id == id);
+
+        if (entity is null) 
+        {
+            TempData["ErrorMsg"] = $" Cannot delete Customer #{id}";
+            return RedirectToAction(nameof(Index));
+        }
+        if (entity.Transactions.Count > 0) 
+        {
+            _ctx.Transactions.RemoveRange(entity.Transactions);
+        }
+
+        _ctx.Customers.Remove(entity);
+        if(_ctx.SaveChanges() != 1 + entity.Transactions.Count) 
+        {
+            TempData["ErrorMsg"] = $"Cannot delete Customer #{id}";
+        
+        }
+        return RedirectToAction(nameof(Index));
+      }
       }
 }
