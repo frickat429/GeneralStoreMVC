@@ -2,7 +2,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace GeneralStoreMVC.Models.Product;
 
-public class ProductDetailVm 
+public class ProductDetailVM
 {
     public int Id { get; set; }
     
